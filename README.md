@@ -1,4 +1,4 @@
-# lumberjack  [![GoDoc](https://godoc.org/gopkg.in/natefinch/lumberjack.v2?status.png)](https://godoc.org/gopkg.in/natefinch/lumberjack.v2) [![Build Status](https://drone.io/github.com/natefinch/lumberjack/status.png)](https://drone.io/github.com/natefinch/lumberjack/latest) [![Build status](https://ci.appveyor.com/api/projects/status/00gchpxtg4gkrt5d)](https://ci.appveyor.com/project/natefinch/lumberjack) [![Coverage Status](https://coveralls.io/repos/natefinch/lumberjack/badge.svg?branch=v2.0)](https://coveralls.io/r/natefinch/lumberjack?branch=v2.0)
+# lumberjack  [![GoDoc](https://godoc.org/gopkg.in/yangpingcd/lumberjack.v2?status.png)](https://godoc.org/gopkg.in/yangpingcd/lumberjack.v2) [![Build Status](https://drone.io/github.com/yangpingcd/lumberjack/status.png)](https://drone.io/github.com/yangpingcd/lumberjack/latest) [![Build status](https://ci.appveyor.com/api/projects/status/00gchpxtg4gkrt5d)](https://ci.appveyor.com/project/yangpingcd/lumberjack) [![Coverage Status](https://coveralls.io/repos/yangpingcd/lumberjack/badge.svg?branch=v2.0)](https://coveralls.io/r/yangpingcd/lumberjack?branch=v2.0)
 
 ### Lumberjack is a Go package for writing logs to rolling files.
 
@@ -7,10 +7,10 @@ Package lumberjack provides a rolling logger.
 Note that this is v2.0 of lumberjack, and should be imported using gopkg.in
 thusly:
 
-    import "gopkg.in/natefinch/lumberjack.v2"
+    import "gopkg.in/yangpingcd/lumberjack.v2"
 
 The package name remains simply lumberjack, and the code resides at
-https://github.com/natefinch/lumberjack under the v2.0 branch.
+https://github.com/yangpingcd/lumberjack under the v2.0 branch.
 
 Lumberjack is intended to be one part of a logging infrastructure.
 It is not an all-in-one solution, but instead is a pluggable
