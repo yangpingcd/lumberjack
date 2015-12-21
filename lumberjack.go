@@ -92,6 +92,11 @@ type Logger struct {
 	// time.
 	LocalTime bool `json:"localtime" yaml:"localtime"`
 
+	// Callback is called when the log file is opened. openNew indicates if open
+	// a new file or an exist one, the return data will be written in the log
+	// file
+	OpenCallback func(openNew bool) []byte
+
 	size int64
 	file *os.File
 	mu   sync.Mutex
@@ -220,6 +225,14 @@ func (l *Logger) openNew() error {
 	}
 	l.file = f
 	l.size = 0
+
+	if l.OpenCallback != nil {
+		data := l.OpenCallback(true)
+		if data != nil {
+			n, _ := l.file.Write(data)
+			l.size += int64(n)
+		}
+	}
 	return nil
 }
 
@@ -265,6 +278,14 @@ func (l *Logger) openExistingOrNew(writeLen int) error {
 	}
 	l.file = file
 	l.size = info.Size()
+
+	if l.OpenCallback != nil {
+		data := l.OpenCallback(false)
+		if data != nil {
+			n, _ := l.file.Write(data)
+			l.size += int64(n)
+		}
+	}
 	return nil
 }
 
